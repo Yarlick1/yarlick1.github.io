@@ -6,5 +6,8 @@ Seran diversos proyectos tomados como desafios para reforzar mi conocimiento en 
 ## Participantes
 Ing. Yael Ulrick Garay Colin
 
+## Proyectos 
+ - [QR](Proyectos/qr-code-component-main/index.html)
+
 ### Autor
 Ing. Yael Ulrick Garay Colin
