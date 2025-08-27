@@ -46,7 +46,9 @@ Este proyecto me ayudó a:
 
 ---
 
-## ⚙️ Instalación y uso
-1. Clonar el repositorio:  
-   ```bash
-   git clone https://gitlab.com/usuario/repositorio.git
+## 👨‍💻 Autor
+
+**Ing. Yael Ulrick Garay Colin**  
+💼 Desarrollador Web | Front-End Enthusiast  
+
+---
