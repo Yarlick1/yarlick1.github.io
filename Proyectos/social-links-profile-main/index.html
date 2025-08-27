@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: hsl(0, 0%, 8%);
+      font-family: "Inter";
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100vh;
+      margin-bottom: -2rem;
+    }
+    .container_card{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 400px;
+      background-color: hsl(0, 0%, 12%);
+      border-radius: 20px;
+      padding: 2rem 0 2rem 0;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .container_card .card_img{
+      border-radius: 50%;
+      width: 100px;
+      margin: 10px 10px 0 10px;
+    }
+    .title_name{
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 0;
+    }
+    .ubicate{
+      color: hsl(75, 94%, 57%);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .describe{
+      color: hsl(0, 0%, 100%);
+      font-size: 14px;
+    }
+    .containes_btn{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .social{
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: hsl(0, 0%, 100%);
+      background: hsl(0, 0%, 20%);
+      width: 80%;
+      margin: 5px;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .social:hover{
+      background: hsl(75, 94%, 57%);
+      color: hsl(0, 0%, 100%);
+      transition: .3s;
+      scale: 1.05;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="container">
+      <div class="container_card ">
+          <img src="assets\images\avatar-jessica.jpeg" alt="Imagen determinada" class="card_img">
+          <h1 class="title_name">Jessica Randall</h1>
+          <p class="ubicate">London, United Kingdom</p>
+          <p class="describe">"Front-end developer and avid reader."</p>
+            <div class="containes_btn">
+              <a href="" class="social">GitHub</a>
+              <a href="" class="social">Frontend Mentor</a>
+              <a href="" class="social">LinkedIn</a>
+              <a href="" class="social">Twitter</a>
+              <a href="" class="social">Instagram</a>
+            </div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ing. Yael Ulrick Garay Colin</a>.
+  </footer>
+</body>
+</html>
