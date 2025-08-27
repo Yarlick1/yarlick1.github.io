@@ -10,6 +10,7 @@ Este repositorio contiene diversos proyectos desarrollados a partir de los **ret
 
 - [QR Code Component](Proyectos/qr-code-component-main/index.html)
 - [Card Blog](Proyectos\blog-preview-card-main\index.html)
+- [Card Social](Proyectos\social-links-profile-main\index.html)
 
 *(Próximamente se agregarán más proyectos)*
 
