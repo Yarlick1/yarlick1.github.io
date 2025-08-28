@@ -1,0 +1,26 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    box-sizing: border-box;
+    background: #F3E5D8;
+    padding: 0;
+    margin: 0;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contenedor__card{
+    width: 370px;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: hsl(330, 100%, 98%);
+}
+.contenedor__card img{
+    width: 100%;
+    height: auto;
+}
