@@ -45,11 +45,29 @@ h1 {
 
     /* can't use yet */
     /* gap: 100px; */
+    line-height: 1.5;
+    margin: 5rem 0 5rem 0;
+}
+.row .col h2{
+    color: #87629A;
+    font-weight: bold;
+}
+.row_2{
+    display: flex;
+    line-height: 1.5;
+    padding: 2rem 11rem 2rem 11rem;
+    background-color: #136C72;
+    color: #FFF;
 }
 
 .col {
     /* these are now flex items */
+    font-size: 17px;
+    text-align: center;
     width: 100%;
+}
+.col + .col {
+    margin-left: 70px;
 }
 
 .hero {
