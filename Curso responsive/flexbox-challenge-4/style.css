@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 1.3rem;
+}
+
+.principal{
+    max-height: 660px;
+    background-color: #F3EED9;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor{
+    text-align: center;
+    width: 700px;
+    /* border: 3px solid red; */
+}
+
+.contenedor__titulo{
+    font-size: 60px;
+    margin-top: 0;
+    color: #824936;
+}
