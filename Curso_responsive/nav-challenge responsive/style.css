@@ -205,8 +205,8 @@ header {
         display: flex;
         height: auto;
         flex-direction: row;
-        justify-content: space-between;
-        margin-left: 4em;
+        justify-content: flex-end;
+        position: relative;
     }
 
     .nav__list{
