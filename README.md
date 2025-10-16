@@ -25,7 +25,7 @@ Este repositorio contiene diversos proyectos desarrollados a partir de los **ret
 - [Day flexbox-challenge-4](Curso_responsive\flexbox-challenge-4\index.html)
 - [Day flexbox-challenge-4-solution](Curso_responsive\flexbox-challenge-4-solution\index.html)
 - [Day nav-challenge](Curso_responsive\nav-challenge\index.html)
-- [Day nav-challenge-responsive](Curso_responsive\nav-challengeresponsive\index.html)
+- [Day nav-challenge-responsive](Curso_responsive\nav-challenge_responsive\index.html)
 - [Day Challenge Final](Curso_responsive\Challenge-Final\index.html)
 
 
