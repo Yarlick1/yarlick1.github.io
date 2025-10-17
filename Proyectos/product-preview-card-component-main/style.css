@@ -1,0 +1,127 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --fuente-M: 'Montserrat', sans-serif;
+    --fuente-F: 'Fraunces', sans-serif;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    background-color: #F3EAE3;
+}
+
+img{
+    max-width: 100%;
+}
+
+.card_img-mobile{
+    border-radius: 10px 10px 0 0;
+}
+
+.card_img-desktop{
+    display: none;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: var(--fuente-M);
+    margin: 5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card__descripcion{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo{
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    color: #504f4f;
+    font-size: .8em;
+}
+
+.titulo{
+    margin-top: 0;
+    line-height: 1em;
+    font-family: var(--fuente-F);
+}
+
+.card_texto{
+    line-height: 1.5em;
+    color: #504f4f;
+}
+
+.precio_actual{
+    font-family: var(--fuente-F);
+    color: hsl(158, 36%, 37%);
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin-block-start: 0;
+}
+
+.precio_anterior{
+    color: #7a7a7a;
+    text-decoration: line-through;
+    font-size: .3em;
+    font-family: var(--fuente-M);
+    text-align: center;
+    margin-inline-start: 1em;
+    font-weight: 0;
+}
+
+.btn__cart{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: hsl(158, 36%, 37%);
+    padding: 1em;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 700;
+    font-size: .8em;
+    transition: all 0.3s ease-in-out; /* Transicion para suavizar el cambio de color */
+}
+
+.btn__cart:hover{
+    background-color: hsl(158, 42%, 18%);
+}
+
+.btn_icono{
+    margin: 0 .5em;
+}
+
+@media (min-width: 48em){
+    .card_img-desktop{
+        display: block;
+        max-width: 300px;
+        border-radius: 10px 0 0 10px;
+    }
+    .card_img-mobile{
+        display: none;
+    }
+    .card{
+        flex-direction: row;
+    }
+
+}
