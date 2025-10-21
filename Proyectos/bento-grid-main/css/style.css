@@ -1,0 +1,294 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+/* Agregamos fuente */
+@font-face {
+    font-family: 'MDSans'; /*Nombre de fuente */
+    src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('woff2'), /* Ruta relativa */
+         url('../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('woff'); /* Para compatibilidad */
+}
+
+:root{
+    --font-mds: 'MDSans', sans-serif;
+}
+
+/*Feel free to remove these styles or customise in your own stylesheet 👍*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* removemos margenes de los h1 */
+h1, p{
+    margin: 0;
+}
+
+/* Establecer valores predeterminados de la raíz del núcleo */
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+/* Establecemos valores al cuerpo */
+body{
+    font-family: var(--font-mds);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+/* hacer que sea más facil trabajar con las imagenes */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* Heredar fuentes para input y botones */
+input,
+button,
+textarea,
+select{
+    font: inherit;
+}
+
+/* Removemos las animaciones y transiciones si es que el usuario las tiene desactividas en su SO */
+@media (prefers-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *, *::after,
+    *::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* INICIAMOS CON EL DISEÑO */
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
+h1{
+    font-weight: 500;
+}
+
+
+
+/* contenido de cada articulo */
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow {
+    margin-block-start: 2em;
+}
+
+/* colores de fondo de los articulos */
+.articulo--socialMedia{
+    background-color: hsl(256, 67%, 59%);
+    color: #F5F5F5;
+    font-size: 1rem !important;
+    text-align: center;
+    line-height: 1;
+}
+.articulo--socialMedia img{
+    max-width: 200px;
+    margin-block: 1em 0.3em;
+}
+.articulo--socialMedia p{
+    opacity: 0.8;
+    font-size: 0.7rem;
+}
+.articulo--manageMultiple{
+    background-color: #fff;
+    line-height: 1;
+    padding: 1em !important;
+    font-size: 9px !important;
+    font-weight: bold;
+}
+.articulo--manageMultiple img{
+    margin-block-end: 1em;
+}
+.articulo--maintain{
+    background-color: hsl(39, 100%, 71%);
+    font-size: 9px !important;
+    padding: 1.5em 1.5em 0 !important;
+    font-weight: bold;
+    align-items: normal !important;
+}
+.articulo--maintain img{
+    max-width: 200px;
+    margin-block: 1em 0;
+}
+.articulo--schedule{
+    background-color: hsl(254, 88%, 90%);
+    font-size: 9px !important;
+    padding: 2.5em 1.5em !important;
+    font-weight: bold;
+    text-align: center;
+}
+.articulo--schedule img{
+    margin-block: 1.5em;
+}
+.articulo--schedule p{
+    opacity: 0.8;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+.articulo--grow{
+    background-color: hsl(256, 67%, 59%);
+    color: #F5F5F5;
+    padding: 1.5em 5em !important;
+    text-align: center;
+    font-size: 9px !important;
+}
+.articulo--grow img{
+    max-width: 200px;
+    margin-block-end: 2.5em;
+}
+.articulo--faster{
+    background-color: #fff;
+    align-items: normal;
+    gap: 1em;
+}
+.articulo--faster img{
+    max-width: 200px;
+}
+.articulo--create{
+    background-color: hsl(31, 66%, 93%);
+    font-size: 9px !important;
+    font-weight: bold;
+    align-items: normal;
+}
+.articulo--create img{
+    margin-block-start: 2em;
+    max-width: 200px;
+}
+.articulo--write{
+    background-color: hsl(39, 100%, 71%);
+    font-size: 9px !important;
+    padding: 2em !important;
+    align-items: normal;
+}
+.articulo--write img{
+    max-width: 200px;
+    margin-block-start: 2em;
+}
+.color--1{
+    color: hsl(39, 100%, 71%);
+}
+.color--2{
+    color: hsl(256, 67%, 59%);
+}
+
+/* componentes */
+.template--grid{
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'social'
+    'manage'
+    'maintain'
+    'schedule'
+    'grow'
+    'faster'
+    'create'
+    'write';
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.articulos{
+    font-size: 0.8125rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+}
+
+.articulos:nth-child(1){
+    grid-area: social;
+}
+.articulos:nth-child(2){
+    grid-area: manage;
+}
+.articulos:nth-child(3){
+    grid-area: maintain;
+}
+.articulos:nth-child(4){
+    grid-area: schedule;
+}
+.articulos:nth-child(5){
+    grid-area: grow;
+}
+.articulos:nth-child(6){
+    grid-area: faster;
+}
+.articulos:nth-child(7){
+    grid-area: create;
+}
+.articulos:nth-child(8){
+    grid-area: write;
+}
+
+@media screen and (min-width: 33em){
+    .template--grid{
+        grid-template-areas: 
+        'social social'
+        'schedule manage'
+        'schedule maintain'
+        'faster create'
+        'write grow';
+    }
+}
+
+@media screen and (min-width: 54rem){
+    .template--grid{
+        grid-template-areas: 
+        'social social schedule'
+        'manage maintain schedule'
+        'faster create write'
+        'grow grow grow';
+    }
+    .articulo--grow{
+        flex-direction: row;
+    }
+    .articulos{
+        font-size: inherit !important;
+    }
+    img{
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (min-width: 75rem){
+    .template--grid{
+        grid-template-areas: 
+        'create social social schedule'
+        'create manage maintain schedule'
+        'write manage maintain schedule'
+        'write faster grow grow';
+    }
+    .articulo--grow{
+        flex-direction: row;
+    }
+    .articulos{
+        font-size: inherit !important;
+    }
+    img{
+        width: 100% !important;
+    }
+
+}
+
