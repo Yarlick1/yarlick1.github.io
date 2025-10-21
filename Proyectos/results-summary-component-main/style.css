@@ -1,0 +1,213 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* agregamos la fuente */
+@font-face {
+    font-family: 'Hanken';
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+/* Establecer valores predeterminados */
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 , h4, p{
+    margin: 0;
+}
+
+/* Valores del cuerpo */
+body{
+    font-family: 'Hanken', sans-serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    margin: 0;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+/* Hacer que sea más facil trabajar con las imagenes */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* Heredar fuentes input y botones */
+input,
+button,
+textarea,
+select{
+    font: inherit;
+}
+
+/* Removemos las animaciones si el usuario lo tiene desactivado */
+@media (prefers-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *, *::after, *::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+main{
+    width: min(95%, 70rem);
+    margin: auto;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(178deg, #6743FF, #5138F4, #3B30EE);
+    justify-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 1.5em 3em 2em;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+}
+.titulo{
+    opacity: 0.7;
+    margin-block: 0 1em;
+}
+.n__resultado{
+    background: linear-gradient(181deg, #4A25CD, #4633ee00);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block-end: 2em;
+}
+.numero-resultado{
+    font-size: 2.5em;
+}
+.numero-rangomax{
+    font-size: 0.8em;
+    opacity: 0.5;
+}
+.estado{
+    margin: 0.5em;
+    font-weight: 500;
+}
+.mensaje{
+    line-height: 1.3;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+.summary{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.summary__titulo{
+    font-size: 1em;
+}
+.reacciones{
+    padding: 0 0 0 1em;
+    font-size: 0.9em;
+}
+
+.reacciones div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+}
+
+.reacciones >:where(:not(:first-child)){
+    margin-block-start: 1em;
+}
+
+.img_text{
+    gap: 1em;
+}
+
+.img_text p{
+    font-weight: bold;
+}
+
+.reaccion{
+    background-color: #FFF6F7;
+}
+.memory{
+    background-color: #FFFAF4;
+}
+.verbal{
+    background-color: #F2FDF9;
+}
+.visual{
+    background-color: #F4F4FE;
+}
+.label--red{
+    color: hsl(0, 100%, 67%);
+}
+.label--yellow{
+    color: hsl(39, 100%, 56%);
+}
+.label--green{
+    color: hsl(166, 100%, 37%);
+}
+.label--blue{
+    color: hsl(234, 85%, 45%);
+}
+
+.total{
+    font-weight: bold;
+}
+
+.opacity{
+    opacity: 0.5;
+}
+
+.btn__continue{
+    text-decoration: none;
+    color: #ffff;
+    background-color: #303B59;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 33em) {
+    .contenedor{
+        flex-direction: row;
+        padding-block: 5rem;
+        justify-content: center;
+    }
+    .result{
+        border-radius: 20px;
+        box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+        max-width: 250px;
+        padding: 1em;    
+    }
+
+    .summary{
+        min-width: 300px;
+        box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+    }
+}
