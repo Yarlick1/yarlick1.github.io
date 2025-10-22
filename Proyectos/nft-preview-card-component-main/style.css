@@ -3,7 +3,7 @@
 }
 
 /* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin-block: 3em 1em;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
@@ -64,7 +64,8 @@ main{
     width: min(80%, 50rem);
     margin: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedor{
@@ -80,11 +81,45 @@ main{
     border-radius: 5px;
 }
 
+.contenedor__eye{
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+
+.fondo:hover{
+    opacity: 1;
+}
+
+.fondo{
+    position: absolute;
+    background-color: hsla(178, 100%, 50%, 0.326);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.eye{
+    position: absolute;
+}
+
 .titulo{
     color: #fff;
     font-weight: 500;
     font-size: 1.125em;
     margin-block: 1em;
+}
+.titulo:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: all 0.5s;
 }
 .descripcion{
     line-height: 1.5;
@@ -144,4 +179,10 @@ main{
 
 .white{
     color: #fff;
+}
+
+.white:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: all 0.5s;
 }
