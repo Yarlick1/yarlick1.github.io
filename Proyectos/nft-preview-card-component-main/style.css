@@ -1,0 +1,147 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* Establecer desplazamiento suave */
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+/* Quitamos margenes de los siguientes elementos */
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+/* Valores del cuerpo */
+body{
+    font-family: "Outfit", sans-serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+}
+
+/* Hacer que sea más facil manipular las imagenes */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* Mejora visual en el subrayado de los enlaces que no tienen clase */
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+/* Heredamos la fuente a los botones e input */
+input, button, textarea, select{
+    font: inherit;
+}
+
+/* Remover las animaciones para los usuarios que activan reducir movimiento en si SO */
+@media (prefers-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *, *::after, *::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body{
+    background-color: hsl(217, 54%, 11%);
+    display: grid;
+}
+
+main{
+    width: min(80%, 50rem);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor{
+    background-color: hsl(216, 50%, 16%);
+    padding: 1em;
+    margin-block: 3em 0;
+    box-shadow: -1px 13px 20px 0px #00000054;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.img__first{
+    border-radius: 5px;
+}
+
+.titulo{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.125em;
+    margin-block: 1em;
+}
+.descripcion{
+    line-height: 1.5;
+    color: hsl(215, 51%, 70%);
+    opacity: 0.5;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.puntos__dias{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1em;
+    border-block-end: 1px solid hsla(217, 8%, 34%, 0.565);
+}
+
+.puntos, .dias{
+    display: flex;
+    font-size: 0.8em;
+    align-items: center;
+}
+
+.puntos img, .dias img{
+    margin-inline-end: 0.5em;
+}
+
+.puntos--text{
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.dias--text{
+    color: hsl(215, 51%, 70%);
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.avatar{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-block: 0.5em;
+}
+
+.avatar img{
+    width: 1.50rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+
+.descipcion_create{
+    font-size: 0.8em;
+    color: hsl(215, 51%, 70%);
+    opacity: 0.5;
+}
+
+.white{
+    color: #fff;
+}
