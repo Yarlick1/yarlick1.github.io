@@ -1,0 +1,174 @@
+:root{
+    --primary_blue-100: hsl(225, 100%, 94%);
+    --primary_blue-700: hsl(245, 75%, 52%);
+    --neutral_blue-50: hsl(225, 100%, 98%);
+    --neutral_gay-600: hsl(224, 23%, 55%);
+    --neutral_blue-950: hsl(223, 47%, 23%);
+    --font__size-body: 1em; /*16px*/
+    --font__famyly-body: "Red Hat Display", sans-serif;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Remover animacion bruscar para uso del teclado */
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+/* Removemos los margin que existan en las sigueinte etiquetas */
+h1,h2,h3,p{
+    margin: 0;
+}
+
+/* Mejoramos la visibilidad de lo subrayado de la etiqueta enlace la cuales no tengas clase*/
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+/* Heredamos fuente a los botones e input */
+input, button, textarea, select{
+    font: inherit;
+}
+
+/* Removemos animaciones que el usuario haya desactivado en su SO */
+@media (prefers-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *, *::after, *::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Hacemos que sea mas facil trabajar con las imagenes */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* componentes del cuerpo */
+body{
+    /* imagen de fondo */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('images/pattern-background-mobile.svg');
+    background-size: cover;
+    
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: var(--font__famyly-body);
+}
+
+.contenedor{
+    background-color: #fff;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'uno'
+    'dos';
+
+
+    width: min(80%,300px);
+    margin: auto;
+    margin-block: 5em;
+    box-shadow: 5px 6px 20px 5px #00000036;
+}
+
+.contender__imagen img{
+    border-radius: 10px 10px 0 0;
+}
+
+.contenedor__descripcion--music{
+    display: grid;
+    gap: 1.3em;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.titulo{
+    font-size: var(--font__size-body);
+    color: var(--neutral_blue-950);
+    font-weight: 900;
+}
+
+.descripcion{
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+.contenido__musical{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: start;
+    margin-block-end: 1em;
+    font-size: 0.8em;
+}
+
+.plan{
+    color: var(--neutral_blue-950);
+    font-weight: 900;
+}
+.plan span{
+    font-weight: normal;
+    opacity: 0.8;
+}
+.enlace{
+    color: var(--neutral_blue-950);
+    font-weight: 800;
+}
+
+.btn_padding{
+    padding: 0.8em 2em;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.btn_payment{
+    color: #fff;
+    background-color: var(--primary_blue-700);
+    box-shadow: 5px 6px 20px 5px #00000036;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.btn__cancel{
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+@media all and (min-width: 25em){
+    body{
+    /* imagen de fondo */
+        background-repeat: no-repeat;
+        background-image: url('images/pattern-background-desktop.svg');
+        background-size: contain;
+    }
+}
+
+.enlace:hover{
+    transition: all .2s;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.btn_payment:hover{
+    transition: all 0.2s;
+    opacity: 0.5;
+}
+
+.btn__cancel:hover{
+    transition: all 0.2s;
+    font-weight: 900;
+}
