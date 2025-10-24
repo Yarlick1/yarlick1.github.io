@@ -1,10 +1,17 @@
-*, *::after, *::before{
-    box-sizing: border-box;
-    font-family: "Barlow Semi Condensed", sans-serif;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 /* Removemos margenes por default */
 body,
@@ -16,80 +23,79 @@ p,
 figure,
 blockquote,
 dl,
-dd{
-    margin: 0;
+dd {
+  margin: 0;
 }
 
 /* Establecer valores predeterminados de la raíz del núcleo */
-html:focus-within{
-    scroll-behavior: smooth;/* Desliza suavemente cuando usa la navegación por teclado */
+html:focus-within {
+  scroll-behavior: smooth; /* Desliza suavemente cuando usa la navegación por teclado */
 }
 
 /* Establecer valores del cuerpo */
 
-body{
-    min-height: 100vh;
-    text-rendering: optimizeSpeed; /* Renderiza el texto mas rapido */
-    line-height: 1.5;
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed; /* Renderiza el texto mas rapido */
+  line-height: 1.5;
 }
 
 /* A elementos que no tienen class quitarelos la decoracion */
-a:not([class]){
-    text-decoration-skip-ink: auto;
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 /* Hacer que sea mas facil trabajar con las imagenes */
-img{
-    max-width: 100%;
-    display: block;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* Heredar fuentes para input y botones */
 input,
 button,
 textarea,
-select{
-    font: inherit;
+select {
+  font: inherit;
 }
 
 /* Removemos las animaciones y transiciones por defecto que el usuario en su so desactivo*/
-@media (prefers-reduced-motion: reduce){
-    html:focus-within{
-        scroll-behavior: auto;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-     *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-    
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-body{
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
-    background-color: hsl(210 46% 95%);
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: hsl(210 46% 95%);
 }
 
 h1,
 h2,
 h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-.datos_user{
-    display: flex;
-    gap: 1rem;
+.datos_user {
+  display: flex;
+  gap: 1rem;
 }
 
 .flow > *:where(:not(:first-child)) {
-    /* Aplica un margen superior a todos los elementos excepto al primero. */
-    margin-top: 1em;
+  /* Aplica un margen superior a todos los elementos excepto al primero. */
+  margin-top: 1em;
 }
 
 .bg-primary-400 {
@@ -109,7 +115,7 @@ h3 {
 }
 
 .text-neutral-100 {
-  color: hsl(0 0% 100%);;
+  color: hsl(0 0% 100%);
 }
 .text-secondary-400 {
   color: hsl(217 19% 35%);
@@ -120,94 +126,97 @@ h3 {
 
 /* Componentes */
 
-.contenedor{
-    display: grid;
-    gap: 1.5rem;
-    grid-auto-columns: 1fr; /* se colocaran las columnas necesarias en el navegador */
-    grid-template-areas: 
-    'uno'
-    'dos'
-    'tres'
-    'cuatro'
-    'cinco';
+.contenedor {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr; /* se colocaran las columnas necesarias en el navegador */
+  grid-template-areas:
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    "cinco";
 
-    padding-block: 2rem;
-    width: min(95%, 70rem);
-    margin-inline: auto;
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
 }
 
-.articulos{
-    font-size: 0.8125rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+.articulos {
+  font-size: 0.8125rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
 }
 
 /* asignar nombre grid a los articulos */
-.articulos:nth-child(1){
-    grid-area: uno;
+.articulos:nth-child(1) {
+  grid-area: uno;
 }
-.articulos:nth-child(2){
-    grid-area: dos;
+.articulos:nth-child(2) {
+  grid-area: dos;
 }
-.articulos:nth-child(3){
-    grid-area: tres;
+.articulos:nth-child(3) {
+  grid-area: tres;
 }
-.articulos:nth-child(4){
-    grid-area: cuatro;
+.articulos:nth-child(4) {
+  grid-area: cuatro;
 }
-.articulos:nth-child(5){
-    grid-area: cinco;
-}
-
-@media screen and (min-width: 33em) { /* 33em = 528px */
-    .contenedor{
-        grid-template-areas: 
-        "uno uno"
-        "dos tres"
-        "cinco cinco"
-        "cuatro cuatro";
-    }
+.articulos:nth-child(5) {
+  grid-area: cinco;
 }
 
-@media screen and (min-width: 54em) { /*54 em 864px*/
-    .contenedor{
-        grid-template-areas: 
-        'uno uno dos'
-        'cinco cinco cinco'
-        'tres cuatro cuatro';
-    }
+@media screen and (min-width: 33em) {
+  /* 33em = 528px */
+  .contenedor {
+    grid-template-areas:
+      "uno uno"
+      "dos tres"
+      "cinco cinco"
+      "cuatro cuatro";
+  }
 }
 
-@media screen and (min-width: 75em){/*75em 1200px*/
-    .contenedor{
-        grid-template-areas: 
-        'uno uno dos cinco'
-        'tres cuatro cuatro cinco';
-    }
-} 
+@media screen and (min-width: 54em) {
+  /*54 em 864px*/
+  .contenedor {
+    grid-template-areas:
+      "uno uno dos"
+      "cinco cinco cinco"
+      "tres cuatro cuatro";
+  }
+}
 
-.articulos.quote{
+@media screen and (min-width: 75em) {
+  /*75em 1200px*/
+  .contenedor {
+    grid-template-areas:
+      "uno uno dos cinco"
+      "tres cuatro cuatro cinco";
+  }
+}
+
+.articulos.quote {
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 10%;
 }
 
-.articulos img{
-    width: 1.75rem;
-    aspect-ratio: 1; /*Forza un cuadrado perfecto a la imagen*/
-    border-radius: 50%;
+.articulos img {
+  width: 1.75rem;
+  aspect-ratio: 1; /*Forza un cuadrado perfecto a la imagen*/
+  border-radius: 50%;
 }
 
-.articulos .name{
-    font-size: 0.8125rem;
-    font-weight: 500;
-    line-height: 1;
+.articulos .name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
-.articulos .descripcion{
-    font-size: 0.6875rem;
-    opacity: 0.5;
+.articulos .descripcion {
+  font-size: 0.6875rem;
+  opacity: 0.5;
 }
 
 .articulos > p:first-of-type {

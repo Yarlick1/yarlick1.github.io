@@ -60,7 +60,7 @@ body{
     display: grid;
 }
 
-main{
+.l-main{
     width: min(80%, 50rem);
     margin: auto;
     display: flex;
@@ -68,7 +68,7 @@ main{
     align-items: center;
 }
 
-.contenedor{
+.c-card{
     background-color: hsl(216, 50%, 16%);
     padding: 1em;
     margin-block: 3em 0;
@@ -77,22 +77,22 @@ main{
     max-width: 300px;
 }
 
-.img__first{
+.c-card__image{
     border-radius: 5px;
 }
 
-.contenedor__eye{
+.c-card__media{
     position: relative;
     justify-items: center;
     align-items: center;
     display: grid;
 }
 
-.fondo:hover{
+.c-card__fondo:hover{
     opacity: 1;
 }
 
-.fondo{
+.c-card__fondo{
     position: absolute;
     background-color: hsla(178, 100%, 50%, 0.326);
     border-radius: 5px;
@@ -106,22 +106,18 @@ main{
     transition: all 0.2s;
 }
 
-.eye{
-    position: absolute;
-}
-
-.titulo{
+.c-card__titulo{
     color: #fff;
     font-weight: 500;
     font-size: 1.125em;
     margin-block: 1em;
 }
-.titulo:hover{
+.c-card__titulo:hover{
     color: hsl(178, 100%, 50%);
     cursor: pointer;
     transition: all 0.5s;
 }
-.descripcion{
+.c-card__descripcion{
     line-height: 1.5;
     color: hsl(215, 51%, 70%);
     opacity: 0.5;
@@ -129,59 +125,59 @@ main{
     font-size: 0.8em;
 }
 
-.puntos__dias{
+.c-card__puntosDias{
     display: flex;
     justify-content: space-between;
     padding-block: 1em;
     border-block-end: 1px solid hsla(217, 8%, 34%, 0.565);
 }
 
-.puntos, .dias{
+.c-card__puntos, .c-card__dias{
     display: flex;
     font-size: 0.8em;
     align-items: center;
 }
 
-.puntos img, .dias img{
+.c-card__puntos img, .c-card__dias img{
     margin-inline-end: 0.5em;
 }
 
-.puntos--text{
+.c-card__text{
     color: hsl(178, 100%, 50%);
     font-weight: 600;
 }
 
-.dias--text{
+.c-card__dias--text{
     color: hsl(215, 51%, 70%);
     font-weight: 500;
     opacity: 0.5;
 }
 
-.avatar{
+.c-card__avatar{
     display: flex;
     gap: 0.5em;
     align-items: center;
     margin-block: 0.5em;
 }
 
-.avatar img{
+.c-card__avatar img{
     width: 1.50rem;
     aspect-ratio: 1;
     border-radius: 50%;
     border: 1px solid #ffffff;
 }
 
-.descipcion_create{
+.c-card__descripcion{
     font-size: 0.8em;
     color: hsl(215, 51%, 70%);
     opacity: 0.5;
 }
 
-.white{
+.c-card__avatar-name{
     color: #fff;
 }
 
-.white:hover{
+.c-card__avatar-name:hover{
     color: hsl(178, 100%, 50%);
     cursor: pointer;
     transition: all 0.5s;
