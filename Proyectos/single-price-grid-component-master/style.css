@@ -51,7 +51,10 @@ body{
 }
 
 .l-margen{
+    display: grid;
+    place-content: center;
     width: min(90%, 38rem);
+    min-height: 100vh;
     margin: auto;
 }
 
@@ -65,7 +68,6 @@ body{
     'monthly'
     'why';
 
-    margin-block: 1em;
 }
 
 .c-articulos_backwhite:nth-child(1){
