@@ -1,0 +1,228 @@
+:root {
+  --background-color--gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+  --background-color--blue200: hsl(243, 100%, 93%);
+  --background-color--grayish-blue: hsl(229, 7%, 55%);
+  --background-color--blue850: hsl(228, 56%, 26%);
+  --background-color--blue950: hsl(229, 57%, 11%);
+  --font-size: 0.88em;
+  --font-family: "Raleway", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+body,
+p {
+  margin: 0;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+.l-centro {
+  width: min(90%, 60rem);
+  margin: auto;
+}
+
+.l-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "logo"
+    "texto"
+    "tooltip";
+  gap: 1em;
+
+  margin-block: 5em;
+  /* max-width: 60em; */
+}
+.c-fylo:nth-child(1) {
+  grid-area: logo;
+}
+.c-storage:nth-child(2) {
+  grid-area: texto;
+}
+.c-gb_left:nth-child(3) {
+  grid-area: tooltip;
+}
+
+.c-fylo {
+  background-color: var(--background-color--blue850);
+  border-radius: 10px 5em 10px 10px;
+  box-shadow: -4px 12px 19px 5px #00000a76;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+}
+.c-contenedor_opciones {
+  display: flex;
+  gap: 1em;
+}
+.c-contenedor__imagen {
+  align-content: center;
+  background-color: var(--background-color--blue950);
+  border-radius: 10px;
+  padding: 0.6em;
+}
+
+.c-storage {
+  background-color: var(--background-color--blue850);
+  border-radius: 10px;
+  box-shadow: -4px 12px 19px 5px #00000a76;
+  color: #fff;
+  padding: 2em 2em 3em 2em;
+}
+.c-texto {
+  text-align: center;
+  font-weight: lighter;
+}
+.c-fondo_carga {
+  align-content: center;
+  background-color: var(--background-color--blue950);
+  border-radius: 30px;
+  height: 1.3em;
+  margin-block: 1em 0.5em;
+  width: auto;
+}
+.c-carga {
+  background: linear-gradient(100grad, var(--background-color--gradient));
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 1em;
+  margin-inline: 2px;
+  width: 70%;
+}
+.c-punto {
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 0.7em;
+  margin-inline-end: 2px;
+}
+
+.c-gb {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+.l-centrar_left {
+  display: flex;
+  justify-content: center;
+  margin-block-start: -3em;
+}
+.c-gb_left {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em 1.5em;
+  width: fit-content;
+}
+.c-gb_left_texto {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+.c-gb_span {
+  opacity: 0.5;
+  font-size: 0.4em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 35em) {
+  body{
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-color: var(--background-color--blue950);
+  }
+  .l-grid {
+    grid-template-areas: "logo texto texto";
+    padding-block: 10em 0;
+  }
+  .c-storage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+  }
+  .c-texto {
+    text-align: start;
+  }
+  .l-centrar_left {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    margin-block-start: -2em;
+
+    height: fit-content;
+  }
+  .l-centrar_left::after {
+    content: "";
+    display: block;
+    border-top: 50px solid #fff;
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    position: relative;
+    top: 2.5em;
+    right: 2.13em;
+  }
+}
