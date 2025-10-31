@@ -1,0 +1,384 @@
+:root {
+  --color_primary-green: hsl(171, 66%, 44%);
+  --color_primary-blue: hsl(233, 100%, 69%);
+  --color_neutral-gray700: hsl(210, 10%, 33%);
+  --color_neutral-gray500: hsl(201, 11%, 66%);
+  --font-size: 1.13em;
+  --font_family: "Bai Jamjuree", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+body {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font_family);
+  background-image: url(images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.texto--cuerpo {
+  color: var(--color_neutral-gray500);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.l-encabezado {
+  align-items: center;
+  display: grid;
+  margin: auto;
+  min-height: 100vh;
+  width: min(87%, 35em);
+}
+
+.c-introduccion {
+  justify-items: center;
+  display: grid;
+  gap: 3em;
+  text-align: center;
+  margin-block: 5em 8em;
+}
+
+.logo {
+  width: 6.3em;
+}
+
+.c-titulo {
+  font-size: 1.7em;
+  font-weight: 550;
+  opacity: 0.7;
+}
+
+.c-resumen {
+  margin-block-start: -2em;
+}
+
+.c-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 18.8em;
+  font-size: 1em;
+  margin-block-start: -1em;
+}
+
+.c-btnIOS {
+  border-radius: 30px;
+  border-bottom: 2px solid hsla(172, 64%, 11%, 0.357);
+  box-shadow: 0px 11px 20px 5px hsl(171deg 66% 44% / 19%);
+  background-color: var(--color_primary-green);
+  color: #fff;
+  padding: 0.8em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.c-btnMAC {
+  border-radius: 30px;
+  border-bottom: 2px solid hsla(172, 64%, 11%, 0.357);
+  box-shadow: 0px 11px 20px 5px hsl(233deg 100% 69% / 25%);
+  background-color: var(--color_primary-blue);
+  color: #fff;
+  padding: 0.8em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.c-btnIOS:hover,
+.c-btnMAC:hover {
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+.l-margen {
+  display: grid;
+  margin: auto;
+  min-height: 100vh;
+  width: min(87%, 70em);
+  gap: 8em;
+  padding-block: 5em;
+}
+
+.l-secciones {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: grid;
+  gap: 4em;
+}
+
+.c-snippets {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.c-titulo_s,
+.c-titulo_c,
+.c-titulo_w,
+.c-articulo_titulo_w,
+.c-titulo_clip {
+  line-height: 1.3;
+  opacity: 0.7;
+}
+.c-introduccion_s {
+  line-height: 1.8;
+}
+
+.c-articulos_s {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.c-titulo_articulo {
+  opacity: 0.7;
+  margin-block-end: 1em;
+}
+
+.c-clipboard,
+.c-workflow {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.c-imagen_c {
+  margin-block-start: 2em;
+}
+
+.c-articulos_w {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.c-articulo_indivual_w {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  flex: 1;
+}
+
+.c-articulo_image_w {
+  width: 2.5em;
+}
+
+.c-logos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.c-logo_colab {
+  width: 7em;
+}
+
+.margin-more {
+  margin-block: 3em;
+}
+
+footer {
+  background-color: #f5f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  font-size: 0.9em;
+}
+
+.c-logo_f {
+  margin-block: 2em;
+}
+
+.c-logo_fimagen {
+  width: 3em;
+}
+
+.c-enlaces_f {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.c-lista_f,
+.c-lista_fo,
+.c-lista_foo {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.c-iconos_sociales {
+  margin-block: 2em;
+}
+
+.redescosiales {
+  display: flex;
+  gap: 2em;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  opacity: 0.7;
+}
+
+.iconos .enlaces i {
+  font-size: 1.5em;
+}
+
+.enlaces,
+.enlace {
+  text-decoration: none;
+  color: inherit;
+}
+
+.enlace:hover,
+.iconos .enlaces i:hover {
+  transition: all 0.5s;
+  color: var(--color_primary-green);
+}
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 45em) {
+    body{
+        font-size: var(--font-size);
+        background-image: url(images/bg-header-desktop.png);
+    }
+    .c-botones{
+        flex-direction: row;
+        max-width: fit-content;
+    }
+    .c-btnIOS, .c-btnMAC{
+        padding: 0.8em 2em;
+    }
+    .l-margen{
+        padding: 0;
+    }
+    .l-secciones_keep{
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        justify-items: center;
+    }
+    .c-snippets{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        width: 50%;
+    }
+    .c-imagen_s img{
+        position: relative;
+        left: -5em;
+    }
+    .c-articulos_s{
+        gap: 1em;
+        text-align: start;
+        /* margin-inline-end: 17em; */
+    }
+    .c-articulos_w{
+        flex-direction: row;
+        gap: 1em;
+    }
+    .c-logos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .c-logo_colab{
+        width: auto;
+    }
+    .c-clipboard{
+        width: 50%;
+    }
+    .centrar{
+        justify-items: center;
+    }
+    footer{
+        flex-direction: row;
+    }
+    footer div{
+        flex: 1;
+    }
+    .c-logo_f{
+        justify-items: center;
+    }
+    .c-enlaces_f{
+        flex-direction: row;
+    }
+    .c-enlaces_f ul{
+        flex: 1;
+        text-align: start;
+    }
+    .c-iconos_sociales{
+        justify-items: center;
+    }
+    .redescosiales{
+        gap: 1em;
+    }
+}
