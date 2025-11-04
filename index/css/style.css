@@ -46,7 +46,7 @@ img{
 body{
     text-rendering: optimizeSpeed;
     min-height: 100vh;
-    background-color: var(--color_fondo);
+    background-color: var(--color_fondo);;
 }
 
 header{
@@ -104,7 +104,6 @@ main{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    gap: 1em;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 11px 20px 5px #00000a26;
@@ -119,7 +118,7 @@ main{
 }
 
 .demo{
-    border-radius: 10px;
+    border-radius: 5px;
     /* width: 50%; */
 }
 
@@ -149,17 +148,41 @@ p{
 .html{
     color: #F06A31;
     font-size: 1.5em;
+ /* Configura el tiempo y la suavidad de la animación (¡CRUCIAL!) */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    /* Permite que la rotación 3D se vea correctamente */
+    transform-style: preserve-3d;   
+    margin: 0;
 }
 
 .css{
     color: #1C76B8;
     font-size: 1.5em;
+ /* Configura el tiempo y la suavidad de la animación (¡CRUCIAL!) */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    /* Permite que la rotación 3D se vea correctamente */
+    transform-style: preserve-3d;   
+    margin: 0;
+}
+
+.html:hover, .css:hover{
+    /* 1. Rotación Completa (360 grados) y Elevación */
+    /* rotateY(360deg) -> Gira la tarjeta 360 grados sobre el eje Y */
+    /* translateY(-10px) -> Mueve la tarjeta 10px hacia arriba */
+    transform: rotateY(360deg) translateY(-10px); 
+    
+    /* 2. Sombra Acentuada (Efecto de "Elevación") */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    
+    /* Opcional: Asegura que el puntero cambie a mano para indicar interacción */
+    cursor: pointer;
 }
 
 .btn_enlaces{
     display: flex;
     gap: 1em;
     font-size: 0.8em;
+    margin-block-start: 1em;
 }
 
 .live{
@@ -171,6 +194,12 @@ p{
     border-radius: 30px;
 }
 
+.live:hover{
+    transition: all 0.5s;
+    background-color: var(--color_fondo);
+    color: var(--color_texto-principal);
+}
+
 .codigo_fuente{
     text-decoration: none;
     text-align: center;
@@ -178,6 +207,12 @@ p{
     padding: 0.5em 1em;
     color: var(--color_texto-principal);
     border-radius: 30px;
+}
+
+.codigo_fuente:hover{
+    transition: all 0.5s;
+    background-color: var(--color_acento);
+    color: #fff;
 }
 
 @media screen and (min-width: 35em){
