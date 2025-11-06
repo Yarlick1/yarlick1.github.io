@@ -8,26 +8,13 @@ Este repositorio contiene diversos proyectos desarrollados a partir de los **ret
 
 ## 📂 Proyectos Front-End
 
-- [Proyectos estilos basicos](index/proyectos.html)
-- [Proyectos estilos Intermedios](index/proyectos_in.html)
-- [Proyectos estilos Avanzados](index/proyectos_av.html)
+- [Basicos](index/proyectos.html)
+- [Intermedios](index/proyectos_in.html)
+- [Avanzados](index/proyectos_av.html)
 
-## Curso Responsive Flexbox <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5985E1"><path d="M416-360q-15.67 0-25.83-10.17Q380-380.33 380-396v-44h52v28h96v-48.67H416q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q400.33-600 416-600h128q15.67 0 25.83 10.17Q580-579.67 580-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q559.67-360 544-360H416Zm260 0q-15.67 0-25.83-10.17Q640-380.33 640-396v-44h52v28h96v-48.67H676q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q660.33-600 676-600h128q15.67 0 25.83 10.17Q840-579.67 840-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q819.67-360 804-360H676Zm-520 0q-15.67 0-25.83-10.17Q120-380.33 120-396v-168q0-15.67 10.17-25.83Q140.33-600 156-600h128q15.67 0 25.83 10.17Q320-579.67 320-564v44h-52v-28h-96v136h96v-28h52v44q0 15.67-10.17 25.83Q299.67-360 284-360H156Z"/></svg>
+## Cursos <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5985E1"><path d="M416-360q-15.67 0-25.83-10.17Q380-380.33 380-396v-44h52v28h96v-48.67H416q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q400.33-600 416-600h128q15.67 0 25.83 10.17Q580-579.67 580-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q559.67-360 544-360H416Zm260 0q-15.67 0-25.83-10.17Q640-380.33 640-396v-44h52v28h96v-48.67H676q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q660.33-600 676-600h128q15.67 0 25.83 10.17Q840-579.67 840-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q819.67-360 804-360H676Zm-520 0q-15.67 0-25.83-10.17Q120-380.33 120-396v-168q0-15.67 10.17-25.83Q140.33-600 156-600h128q15.67 0 25.83 10.17Q320-579.67 320-564v44h-52v-28h-96v136h96v-28h52v44q0 15.67-10.17 25.83Q299.67-360 284-360H156Z"/></svg>
 
-- [Day 1](Curso_responsive\Day1\index.html)
-- [Day 2](Curso_responsive\Day2\index.html)
-- [Day 3](Curso_responsive\Day3\index.html)
-- [Day 4 - 5](Curso_responsive\Day_4-5\index.html)
-- [Day flexbox](Curso_responsive\Day_flexbox\index.html)
-- [Day flexbox-image](Curso_responsive\Day_flexbox_image\index.html)
-- [Day Grid](Curso_responsive\Day_Grid\index.html)
-- [Day flexbox-challenge-4](Curso_responsive\flexbox-challenge-4\index.html)
-- [Day flexbox-challenge-4-solution](Curso_responsive\flexbox-challenge-4-solution\index.html)
-- [Day nav-challenge](Curso_responsive\nav-challenge\index.html)
-- [Day nav-challenge-responsive](Curso_responsive\nav-challenge_responsive\index.html)
-- [Day Challenge Final](Curso_responsive\Challenge-Final\index.html)
-
-_(Próximamente se agregarán más proyectos)_
+- [FlexBox](Cursos\Curso_responsive\README.md)
 
 ---
 
