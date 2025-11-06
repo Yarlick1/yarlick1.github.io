@@ -1,0 +1,315 @@
+:root{
+    --color_fondo: #EDEFF2;
+    --color_texto-principal: #1a1a1a;
+    --color_acento: #007bff;
+    --color_acento-secundario: #6c757d;
+    --font_family: "Montserrat", sans-serif;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h4, body{
+    margin: 0;
+}
+
+input, button, textarea, select{
+    font: inherit;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *, *::after, *::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    min-height: 100vh;
+    /* Define el degradado lineal */
+    background: linear-gradient(
+        135deg, 
+        #a7c1eb 0%,
+        #a7c1eb 50%, 
+        #F0F0F0 100% 
+    );
+    
+    /* Asegura que el degradado cubra toda la página */
+    background-attachment: fixed;
+    transition: all 0.5ms;
+}
+
+header{
+    position: relative;
+    z-index: 10;
+    width: min(80%, 70rem);
+    margin: auto;
+    margin-block: 2em;
+}
+
+.user{
+    background-color: #fff;
+    padding: 1em;
+    text-align: center;
+    font-family: var(--font_family);
+    border-radius: 20px;
+    box-shadow: 0px 11px 20px 5px #00000a26;
+}
+
+.name{
+    font-size: 1.5em;
+}
+
+.fa-ranking-star{
+    color: #904FC8;
+}
+
+main{
+    width: min(80%, 70rem);
+    margin: auto;
+
+}
+
+.introduccion{
+    text-align: center;
+    font-family: var(--font_family);
+    margin-block: 2em;
+}
+.descripcion{
+    font-size: 1em;
+    opacity: 0.8;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.proyectos{
+    font-family: var(--font_family);
+}
+.c-titulo{
+    text-align: center;
+}
+.articulos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-block: 2em;
+}
+
+.articulo{
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 11px 20px 5px #00000a26;
+
+}
+
+.articulo:hover{
+    transform: translateY(-10px) !important; 
+}
+/* 
+.icon-pulse {
+    display: inline-block;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+} */
+
+.contenedor_imagen{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #6c757d1a;
+}
+
+.c-descripcion_proyecto{
+    padding: 1em;
+}
+
+.demo{
+    border-radius: 15px 15px 0 0;
+    /* width: 50%; */
+}
+
+p{
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.descripcion_proyecto{
+    opacity: 0.7;
+}
+
+.tecnologias{
+    display: flex;
+    gap: 1em;
+}
+
+.html_css{
+    background-color: var(--color_fondo);
+    color: var(--color_acento-secundario);
+    padding: 0.2em;
+    border-radius: 50%;
+    opacity: 0.8;
+    font-weight: 800;
+}
+
+.html{
+    color: #F06A31;
+    font-size: 1.5em;
+ /* Configura el tiempo y la suavidad de la animación (¡CRUCIAL!) */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    /* Permite que la rotación 3D se vea correctamente */
+    transform-style: preserve-3d;   
+    margin: 0;
+}
+
+.css{
+    color: #1C76B8;
+    font-size: 1.5em;
+ /* Configura el tiempo y la suavidad de la animación (¡CRUCIAL!) */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    /* Permite que la rotación 3D se vea correctamente */
+    transform-style: preserve-3d;   
+    margin: 0;
+}
+
+.html:hover, .css:hover{
+    /* 1. Rotación Completa (360 grados) y Elevación */
+    /* rotateY(360deg) -> Gira la tarjeta 360 grados sobre el eje Y */
+    /* translateY(-10px) -> Mueve la tarjeta 10px hacia arriba */
+    transform: rotateY(360deg) translateY(-10px); 
+    
+    /* 2. Sombra Acentuada (Efecto de "Elevación") */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    
+    /* Opcional: Asegura que el puntero cambie a mano para indicar interacción */
+    cursor: pointer;
+}
+
+
+.live, .codigo_fuente{
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    transform-style: preserve-3d;   
+}
+.live:hover, .codigo_fuente:hover{
+    transform:translateY(-5px); 
+    
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    
+    cursor: pointer;
+}
+
+.btn_enlaces{
+    display: flex;
+    gap: 1em;
+    font-size: 0.8em;
+    margin-block-start: 1em;
+}
+
+.live{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--color_acento);
+    padding: 0.5em 1em;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.live:hover{
+    transition: all 0.5s;
+    background-color: var(--color_fondo);
+    color: var(--color_texto-principal);
+}
+
+.codigo_fuente{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--color_fondo);
+    padding: 0.5em 1em;
+    color: var(--color_texto-principal);
+    border-radius: 30px;
+}
+
+.codigo_fuente:hover{
+    transition: all 0.5s;
+    background-color: var(--color_acento);
+    color: #fff;
+}
+
+@media screen and (min-width: 35em){
+body{
+    background: #fff;
+    transition: all 0.5ms;
+}
+    .user, .introduccion, .c-titulo{
+        text-align: start;
+    }
+    
+/* fondo */
+.container-bubbles{
+    position: absolute;
+    width: 100%;
+    height: 100rem;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 2em;
+    height: 2em;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow:  0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(155s / var(--i));
+    opacity: 0.3;
+}
+.bubbles span:nth-child(even){
+    background: #ca3fff;
+    box-shadow:  0 0 0 10px #ca3fff44,
+    0 0 50px #ca3fff,
+    0 0 100px #ca3fff;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(140vh) scale(0);
+    }
+    100%{
+        transform: translateY(45vh) scale(1);
+    }
+}
+}
