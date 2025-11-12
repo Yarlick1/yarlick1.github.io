@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificado de Finalización - CSS Grid Course</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-color: #ffc600; /* Color principal de Wes Bos */
+        --background-color: #f4f7f6;
+        --card-background: #ffffff;
+        --text-color: #333;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .certificate-container {
+        max-width: 900px;
+        width: 100%;
+        background-color: var(--card-background);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 40px;
+        margin: 20px 0;
+      }
+
+      /* --- Header y Títulos --- */
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 20px;
+      }
+
+      .course-image {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        color: var(--primary-color);
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .header h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-top: 0;
+        color: #555;
+      }
+
+      /* --- Secciones y Listas --- */
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h3 {
+        border-left: 5px solid var(--primary-color);
+        padding-left: 10px;
+        font-size: 1.3em;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 15px;
+      }
+
+      .section ul,
+      .principaeles {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        /* Usa CSS Grid para las listas largas */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+      }
+
+      .section ul a,
+      .principales_li {
+        background: #f0f0f0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        transition: all 0.3s;
+      }
+
+      .section ul a:hover,
+      .principales_li:hover {
+        background-color: #e0e0e0;
+      }
+
+      /* Lista de Módulos Específicos */
+      .modules-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .modules-list a {
+        font-weight: 400;
+        background: #fff8e1; /* Color de acento suave */
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .modules-list a:hover {
+        transform: translateY(-10px);
+      }
+
+      .multiples {
+        list-style: circle !important;
+        padding: 0 !important;
+        display: block !important;
+        gap: 0px !important;
+        margin-inline-start: 2.5em;
+      }
+
+      .multiples a {
+        font-weight: 400;
+        background: none !important; /* Color de acento suave */
+        border-left: 0px solid var(--primary-color) !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        transition: all 0.3s;
+      }
+      .multiples a:hover {
+        background-color: none !important;
+        color: var(--primary-color);
+      }
+
+      .enlace {
+        text-decoration: none;
+        color: black;
+      }
+
+      .extra {
+        font-weight: 400;
+        background: #fff8e1; /* Color de acento suave */
+        border-left: 4px solid var(--primary-color);
+        background: #f0f0f0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        transition: all 0.3s;
+      }
+
+      /* --- Footer --- */
+      .footer {
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #777;
+      }
+
+      .footer a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      /* --- Responsividad --- */
+      @media (max-width: 768px) {
+        .certificate-container {
+          padding: 20px;
+          margin: 10px;
+        }
+
+        .header h1 {
+          font-size: 2em;
+        }
+
+        /* En pantallas pequeñas, la lista de módulos se reduce a una columna */
+        .modules-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate-container">
+      <header class="header">
+        <img
+          src="https://res.cloudinary.com/wesbos/image/upload/v1515524452/GRID-social-share_wlfzk3.png"
+          alt="Banner del curso CSS Grid"
+          class="course-image"
+        />
+        <h1>Certificado de Finalización 🏆</h1>
+        <h2>CSS Grid Video Course - Completado ✅</h2>
+        <p>
+          Este repositorio sirve como <b>registro de finalización</b> del curso
+          intensivo de <b>CSS Grid</b> impartido por <b>Wes Bos</b> en
+          <a href="https://CSSGrid.io" target="_blank">CSSGrid.io</a>.
+        </p>
+        <p>
+          He completado este curso, dominando las técnicas modernas de *layout*
+          con CSS Grid.
+        </p>
+      </header>
+
+      <section class="section">
+        <h3>🧠 Temas Principales Cubiertos</h3>
+        <ul class="principaeles">
+          <li class="principales_li">
+            <b>Fundamentos: <br /></b>
+            <code>display: grid</code>, <code>grid-template-columns</code>, y
+            <code>grid-template-rows</code>.
+          </li>
+          <li class="principales_li">
+            <b>Diseño: <br /></b> Uso de <code>`repeat()`</code>,
+            <code>`minmax()`</code>, y funciones de ajuste como
+            <code>`auto-fit</code>` y <code>`auto-fill`</code>.
+          </li>
+          <li class="principales_li">
+            <b>Posicionamiento:</b><br />Colocación precisa de elementos usando
+            líneas y la técnica de <b><code>Grid Template Areas</code></b
+            >.
+          </li>
+          <li class="principales_li">
+            <b>Flujo:</b><br />
+            Entendimiento de <b>Implicit vs Explicit Tracks</b> y el control del
+            flujo con <code>`grid-auto-flow`</code>.
+          </li>
+          <li class="principales_li">
+            <b>Alineación:</b><br />
+            Dominio de las propiedades de alineación (<code
+              >`justify-*`, `align-*`</code
+            >).
+          </li>
+          <li class="principales_li">
+            <b>Aplicación práctica:</b><br />
+            Construcción de layouts complejos (galerías, <b>full-bleed</b> y
+            maquetación responsiva).
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>📂 Módulos de Solución Completados</h3>
+        <ul class="modules-list">
+          <a href="#" class="enlace"><li class="item">0. Bienvenida</li></a>
+          <a
+            href="02-Starter_Files_and_Tooling_Setup\test-START.html"
+            class="enlace"
+            ><li class="item">1. Starter Files and Tooling Setup</li></a
+          >
+          <a
+            href="03-CSS_Grid_Fundamentals\css-grid-fundamentals-FINISHED.html"
+            class="enlace"
+            ><li class="item">2. CSS Grid Fundamentals</li>
+          </a>
+          <a href="04-CSS_Grid_Dev_Tools\dev-tools-FINISHED.html" class="enlace"
+            ><li class="item">3. CSS Grid Dev Tools</li></a
+          >
+          <a
+            href="05-CSS_Grid_ImplicitvsExplicit_Tracks\implicit-vs-explicit-FINISHED.html"
+            class="enlace"
+            ><li class="item">4. CSS Grid Implicit vs Explicit Tracks</li></a
+          >
+          <a
+            href="06-CSS_grid-auto-flow_Explained\autoflow-FINISHED.html"
+            class="enlace"
+            ><li class="item">5. CSS grid-auto-flow Explained</li></a
+          >
+          <a
+            href="07-Sizing_tracks_in_CSS_Grid\sizing-tracks-FINISHED.html"
+            class="enlace"
+            ><li class="item">6. Sizing tracks in CSS Grid</li></a
+          >
+          <a
+            href="08-CSS_Grid_repeat_function\repeat-FINISHED.html"
+            class="enlace"
+            ><li class="item">7. CSS Grid repeat function</li></a
+          >
+          <a
+            href="09-Sizing_Grid_Items\sizing-items-FINISHED.html"
+            class="enlace"
+            ><li class="item">8. Sizing Grid Items</li></a
+          >
+          <a href="10-Placing_Grid_Items\placing-FINISHED.html" class="enlace"
+            ><li class="item">9. Placing Grid Items</li></a
+          >
+          <a
+            href="11-Spanning_and_Placing_Cardio\get-sweaty-FINISHED.html"
+            class="enlace"
+            ><li class="item">10. Spanning and Placing Cardio</li></a
+          >
+          <a
+            href="12-auto-fit_and_auto-fill\auto-fit-and-auto-fill-FINISHED.html"
+            class="enlace"
+            ><li class="item">11. auto-fit and auto-fill</li></a
+          >
+          <a
+            href="13-Using_minmax()_for_Responsive_Grids\minmax-FINISHED.html"
+            class="enlace"
+            ><li class="item">12. Using minmax() for Responsive Grids</li></a
+          >
+          <li class="item extra">
+            13. Grid Template Areas: <br />
+            <ul class="multiples">
+              <a
+                href="14-Grid_Template_Areas\area-line-names-FINISHED.html"
+                class="enlace"
+                ><li>Area Line Names</li></a
+              ><a
+                href="14-Grid_Template_Areas\areas-FINISHED.html"
+                class="enlace"
+                ><li>Area</li></a
+              >
+            </ul>
+          </li>
+          <a
+            href="15-Naming_Lines_in_CSS_Grid\naming-lines-FINISHED.html"
+            class="enlace"
+            ><li class="item">14. Naming Lines in CSS Grid</li></a
+          >
+          <a
+            href="16-grid-auto-flow_dense_Block_Fitting\dense-FINISHED.html"
+            class="enlace"
+            ><li class="item">15. grid-auto-flow dense Block Fitting</li></a
+          >
+          <a
+            href="17-CSS_Grid_Alignment+Centering\alignment-and-centering-FINISHED.html"
+            class="enlace"
+            ><li class="item">16. CSS Grid Alignment + Centering</li></a
+          >
+          <a href="18-Re-ordering_Grid_Items\order-FINISH.html" class="enlace"
+            ><li class="item">17. Re-ordering Grid Items</li></a
+          >
+          <a
+            href="19-Nesting_Grid_with_Album_Layouts\albums-FINISHED.html"
+            class="enlace"
+            ><li class="item">18. Nesting Grid with Album Layouts</li></a
+          >
+          <a
+            href="20-CSS_Grid_Image_Gallery\image-gallery-START.html"
+            class="enlace"
+            ><li class="item">19. CSS Grid Image Gallery</li></a
+          >
+          <li class="item extra">
+            20. Flexbox vs CSS Grid: <br />
+            <ul class="multiples">
+              <a
+                href="21-FlexboxvsCSS_Grid\axis-flipping-FINISHED.html"
+                class="enlace"
+                ><li>Axis Flipping</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\controls-on-right-FINISHED.html"
+                class="enlace"
+                ><li>Controls on Right</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\flex-on-item-FINISHED.html"
+                class="enlace"
+                ><li>Flex on Item</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\perfectly-centered-FINISHED.html"
+                class="enlace"
+                ><li>Perfectly Centered</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\self-control-FINISHED.html"
+                class="enlace"
+                ><li>Self Control</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\stacked-layout-FINISHED.html"
+                class="enlace"
+                ><li>Stacked Layout</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\unknown-content-size-FINISHED.html"
+                class="enlace"
+                ><li>Unknown Content Size</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\unknown-number-of-items-FINISHED.html"
+                class="enlace"
+                ><li>Unknown Number of Items</li></a
+              ><a
+                href="21-FlexboxvsCSS_Grid\variable-widths-each-row-FINISHED.html"
+                class="enlace"
+                ><li>Variable Widths on Each Row</li></a
+              >
+            </ul>
+          </li>
+          <a href="22-Recreating_Codepen\codepen-FINISHED.html" class="enlace"
+            ><li class="item">21. Recreating Codepen</li></a
+          >
+          <a
+            href="23-Bootstrappy_Grid_with_CSS_Variables\grid-FINISHED.html"
+            class="enlace"
+            ><li class="item">22. Bootstrappy Grid with CSS Variables</li></a
+          >
+          <a href="24-Responisve_Website\responsive-START.html" class="enlace"
+            ><li class="item">23. Responsive Website</li></a
+          >
+          <a
+            href="25-Full_Bleed_Blog_Layout\full-bleed-blog-FINISHED.html"
+            class="enlace"
+            ><li class="item">24. Full Bleed Blog Layout</li></a
+          >
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>
+          📌 Este contenido es para demostración. Para acceder a la explicación
+          en video, por favor visita el sitio oficial del curso:
+          <a href="https://CSSGrid.io" target="_blank">CSSGrid.io</a>.
+        </p>
+
+        <br />
+        <span class="copyright-info">
+          Desarrollado por Ing. Yael Ulrick Garay Colin | Derechos Reservados
+          &copy; 2025
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>

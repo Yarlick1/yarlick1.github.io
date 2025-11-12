@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso FlexBox & Grid - Ing. Yael Ulrick</title>
+    <!-- Configuración para usar la fuente Inter y estilos básicos -->
+    <style>
+        /* 1. Reset y Fuente */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-blue: #5985E1;
+            --secondary-yellow: #d97706; /* Similar a yellow-600 */
+            --secondary-green: #059669; /* Similar a green-600 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso FlexBox & Grid - Ing. Yael Ulrick</title>
+    <!-- Configuración para usar la fuente Inter y estilos básicos -->
+    <style>
+        /* 1. Reset y Fuente */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-blue: #5985E1;
+            --secondary-yellow: #d97706; /* Similar a yellow-600 */
+            --secondary-green: #059669; /* Similar a green-600 */
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --text-dark: #1f2937;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            min-height: 100vh;
+            padding: 1rem; /* p-4 */
+        }
+        
+        /* 2. Contenedor Principal */
+        .container {
+            max-width: 48rem; /* max-w-3xl (768px) */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: var(--bg-card);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+            border-radius: 1.5rem; /* rounded-3xl */
+            padding: 2.5rem; /* p-10 */
+        }
+
+        /* Responsive padding para móvil */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem; /* p-4 en móvil */
+            }
+            .container {
+                padding: 1.5rem; /* p-6 en móvil */
+            }
+        }
+
+        /* 3. Estilos del Encabezado */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem; /* mb-10 */
+        }
+
+        .course-title {
+            font-size: 3rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem; /* gap-3 */
+        }
+
+        /* Estilo para el título en pantallas grandes */
+        @media (min-width: 640px) {
+            .course-title {
+                flex-direction: row;
+                font-size: 3.75rem; /* text-6xl */
+            }
+        }
+
+        .course-title svg {
+            width: 2.5rem; /* w-10 h-10 */
+            height: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        @media (min-width: 640px) {
+            .course-title svg {
+                width: 3rem; /* sm:w-12 sm:h-12 */
+                height: 3rem;
+            }
+        }
+        
+        .course-subtitle {
+            font-size: 1.25rem; /* text-xl */
+            color: #6b7280; /* text-gray-500 */
+            margin-top: 0.5rem; /* mt-2 */
+        }
+
+        .course-hr {
+            margin-top: 1rem; /* mt-4 */
+            border-top: 2px solid var(--primary-blue);
+            opacity: 0.5;
+        }
+
+        /* Estilos de la Introducción */
+        .course-intro {
+            text-align: left;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-blue);
+            background-color: #f9fafb; /* Fondo muy claro */
+            border-radius: 0.5rem;
+        }
+
+        .course-intro p {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            color: #4b5563; /* Gris oscuro */
+            font-size: 1rem;
+        }
+
+        .course-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .course-intro a {
+            color: var(--primary-blue);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* 4. Lista de Enlaces (Grid Responsivo) */
+        .course-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr; /* Una columna por defecto */
+            gap: 1.5rem; /* gap-6 */
+        }
+
+        @media (min-width: 768px) {
+            .course-list {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en desktop */
+            }
+        }
+
+        /* 5. Estilo de la Tarjeta de Enlace */
+        .course-card a {
+            display: block;
+            padding: 1.25rem; /* p-5 */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            color: white;
+        }
+
+        .course-card a:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
+            transform: scale(1.02); /* hover:scale-[1.02] */
+        }
+
+        .card-title {
+            display: block;
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+        }
+
+        .card-subtitle {
+            display: block;
+            font-size: 0.875rem; /* text-sm */
+            opacity: 0.9; /* opacity-90 */
+            margin-top: 0.25rem;
+        }
+
+        /* 6. Colores Específicos de las Tarjetas */
+        .bg-blue { background-color: var(--primary-blue); }
+        .bg-yellow { background-color: var(--secondary-yellow); }
+        .bg-green { background-color: var(--secondary-green); }
+
+        /* 7. Footer */
+        footer {
+            margin-top: 2.5rem; /* mt-10 */
+            padding-top: 1.5rem; /* pt-6 */
+            border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
+            text-align: center;
+            color: #6b7280; /* text-gray-500 */
+            font-size: 0.875rem; /* text-sm */
+        }
+
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="container">
+
+        <!-- HEADER DEL CURSO: Título y SVG -->
+        <header>
+            <h1 class="course-title">
+                FlexBox 
+                <!-- SVG Icono de FlexBox -->
+                <svg class="text-primary-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M416-360q-15.67 0-25.83-10.17Q380-380.33 380-396v-44h52v28h96v-48.67H416q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q400.33-600 416-600h128q15.67 0 25.83 10.17Q580-579.67 580-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q559.67-360 544-360H416Zm260 0q-15.67 0-25.83-10.17Q640-380.33 640-396v-44h52v28h96v-48.67H676q-15 0-25.5-10.5t-10.5-25.5V-564q0-15.67 10.17-25.83Q660.33-600 676-600h128q15.67 0 25.83 10.17Q840-579.67 840-564v44h-52v-28h-96v48.67h112q15 0 25.5 10.5t10.5 25.5V-396q0 15.67-10.17 25.83Q819.67-360 804-360H676Zm-520 0q-15.67 0-25.83-10.17Q120-380.33 120-396v-168q0-15.67 10.17-25.83Q140.33-600 156-600h128q15.67 0 25.83 10.17Q320-579.67 320-564v44h-52v-28h-96v136h96v-28h52v44q0 15.67-10.17 25.83Q299.67-360 284-360H156Z"/>
+                </svg>
+            </h1>
+            <p class="course-subtitle">Contenido y Desafíos del Curso</p>
+            <hr class="course-hr">
+
+            <!-- INTRODUCCIÓN DEL CURSO AÑADIDA -->
+            <div class="course-intro">
+                <p>
+                    ¡Bienvenido a los desafíos prácticos del curso! Este contenido es un registro de los ejercicios y proyectos desarrollados para dominar las técnicas de diseño web modernas con FlexBox y CSS Grid.
+                </p>
+                <p>
+                    Cada día representa un módulo o un desafío específico, diseñado para reforzar conceptos clave y construir layouts responsivos desde cero.
+                </p>
+                <p>
+                    **Atribución:** El contenido y la estructura de estos ejercicios están inspirados en el excelente curso **"Conquering Responsive Layouts"** de Kevin Powell. Puedes encontrar el curso original y más información aquí: <a href="https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts" target="_blank">Enlace al Curso de Kevin Powell</a>
+                </p>
+            </div>
+            <!-- FIN INTRODUCCIÓN DEL CURSO -->
+        </header>
+
+        <!-- LISTA DE DÍAS Y RETOS (Cuerpo del curso) -->
+        <ul class="course-list">
+            
+            <!-- Cada <li> es una tarjeta de enlace responsiva -->
+            <li class="course-card">
+                <a href="Day1/index.html" class="bg-blue">
+                    <span class="card-title">Day 1</span>
+                    <span class="card-subtitle">Introducción a Flexbox</span>
+                </a>
+            </li>
+            
+            <li class="course-card">
+                <a href="Day2/index.html" class="bg-blue">
+                    <span class="card-title">Day 2</span>
+                    <span class="card-subtitle">Alineación y Justificación</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="Day3/index.html" class="bg-blue">
+                    <span class="card-title">Day 3</span>
+                    <span class="card-subtitle">Propiedades de los Ítems Flex</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="Day_4-5/index.html" class="bg-blue">
+                    <span class="card-title">Day 4 - 5</span>
+                    <span class="card-subtitle">Proyectos Prácticos (Parte 1)</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="Day_flexbox/index.html" class="bg-blue">
+                    <span class="card-title">Day flexbox</span>
+                    <span class="card-subtitle">Conceptos Avanzados de Flexbox</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="Day_flexbox_image/index.html" class="bg-blue">
+                    <span class="card-title">Day flexbox-image</span>
+                    <span class="card-subtitle">Manejo de Imágenes con Flexbox</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="Day_Grid/index.html" class="bg-blue">
+                    <span class="card-title">Day Grid</span>
+                    <span class="card-subtitle">Introducción a CSS Grid</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="flexbox-challenge-4/index.html" class="bg-blue">
+                    <span class="card-title">Day flexbox-challenge-4</span>
+                    <span class="card-subtitle">Reto Práctico #4</span>
+                </a>
+            </li>
+            
+            <li class="course-card">
+                <a href="flexbox-challenge-4-solution/index.html" class="bg-yellow">
+                <span class="card-title">Reto #4 - Solución</span>
+                <span class="card-subtitle">Ver implementación del reto</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="nav-challenge/index.html" class="bg-yellow">
+                    <span class="card-title">Day nav-challenge</span>
+                    <span class="card-subtitle">Desafío de Navegación</span>
+                </a>
+            </li>
+
+            <li class="course-card">
+                <a href="nav-challenge_responsive/index.html" class="bg-green">
+                    <span class="card-title">Day nav-challenge-responsive</span>
+                    <span class="card-subtitle">Navegación Responsiva</span>
+                </a>
+            </li>
+            
+            <li class="course-card">
+                <a href="Challenge-Final/index.html" class="bg-green">
+                    <span class="card-title">Day Challenge Final</span>
+                    <span class="card-subtitle">Proyecto Final del Curso</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- FOOTER: Información del desarrollador y derechos de autor -->
+        <footer>
+            <p>
+                Desarrollado por Ing. Yael Ulrick Garay Colin | Derechos Reservados &copy; 2025
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
