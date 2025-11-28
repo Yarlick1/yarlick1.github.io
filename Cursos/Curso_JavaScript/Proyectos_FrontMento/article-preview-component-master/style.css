@@ -1,0 +1,209 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--light-grayish-blue);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Estilos de la Tarjeta */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 1.5rem;
+  max-width: 730px;
+  display: flex;
+  flex-direction: column; /* Móvil por defecto: columna */
+  overflow: visible; /* Importante para que el tooltip se vea fuera en desktop */
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.title {
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--desaturated-dark-blue);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* --- FOOTER (Donde ocurre la magia) --- */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Clave: define el contexto para posicionar cosas encima */
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: opacity 0.3s;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.date {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Botón de Compartir */
+.share-btn {
+  background-color: var(--light-grayish-blue);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  color: var(--desaturated-dark-blue);
+  z-index: 20; /* Asegura que siempre esté por encima */
+  transition: all 0.3s;
+  display: grid;
+  place-items: center;
+}
+
+.share-btn:hover {
+  background-color: var(--desaturated-dark-blue);
+  color: white;
+}
+
+/* Clase activa para el botón (cuando está abierto) */
+.share-btn.active {
+  background-color: var(--desaturated-dark-blue); /* Se oscurece en móvil y desktop */
+  color: white;
+}
+
+/* --- PANEL DE REDES (MOBILE FIRST) --- */
+.social-panel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--very-dark-grayish-blue);
+  
+  /* Posicionamiento Absoluto para cubrir el footer en móvil */
+  position: absolute;
+  top: -10px; /* Ajustes para cubrir padding del padre */
+  left: -32px; /* Ajustes para cubrir padding del padre */
+  right: -32px; /* Ajustes para cubrir padding del padre */
+  bottom: -24px; /* Ajustes para cubrir padding del padre */
+  padding: 0 2rem;
+  
+  border-radius: 0 0 10px 10px;
+  
+  /* Animación */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  z-index: 10;
+}
+
+.social-panel.hidden {
+  opacity: 0;
+  visibility: hidden; /* Esto reemplaza a display: none */
+}
+
+.share-text {
+  color: var(--grayish-blue);
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.triangle {
+  display: none; /* No hay triangulo en móvil */
+}
+
+/* --- ESTILOS DESKTOP (Mayores a 800px) --- */
+@media (min-width: 800px) {
+  .card {
+    flex-direction: row; /* Imagen a la izquierda */
+    overflow: visible;
+  }
+
+  .card-image img {
+    height: 100%;
+    width: 280px;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  /* En desktop, el panel NO cubre el footer, flota arriba */
+  .social-panel {
+    top: auto;
+    left: auto;
+    right: -65px; /* Ajustar horizontalmente */
+    bottom: 80px; /* Mover hacia arriba del botón */
+    
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: max-content;
+  }
+  
+  /* El triangulito del tooltip */
+  .triangle {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 67%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--very-dark-grayish-blue);
+  }
+  
+  /* En desktop, el botón de compartir se oscurece solo si tiene la clase active, 
+     pero necesitamos que pase al frente si es necesario, aunque en este diseño 
+     el botón queda fuera del tooltip */
+}
